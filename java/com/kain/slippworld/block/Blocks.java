@@ -27,6 +27,8 @@ public class Blocks {
 	@SideOnly(Side.CLIENT)
 	public static void initClient() {
 		registerRender(clinzicOre);
+		registerRender(balriumOre);
+		registerRender(estrianOre);
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -25,6 +25,8 @@ public class Items {
 	@SideOnly(Side.CLIENT)
 	public static void initClient() {
 		registerRender(clinzicIngot);
+		registerRender(balriumIngot);
+		registerRender(estrianIngot);
 	}
 
 	@SideOnly(Side.CLIENT)
