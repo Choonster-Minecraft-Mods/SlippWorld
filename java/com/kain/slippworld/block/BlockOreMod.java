@@ -19,7 +19,7 @@ public class BlockOreMod extends BlockMod {
 		this.setHarvestLevel("pickaxe", 3);
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 
-		this.setLightLevel(9);
+		this.setLightLevel(0.625F);
 		this.setHardness(3.0F);
 		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);

@@ -12,11 +12,15 @@ import net.minecraftforge.fml.relauncher.*;
 
 public class Blocks {
 	public static Block clinzicOre, balriumOre, estrianOre;
+	public static Block clinzicBlock, balriumBlock, estrianBlock;
 
 	public static void init() {
 		register(clinzicOre = new BlockOreMod("clinzic_ore"));
 		register(balriumOre = new BlockOreMod("balrium_ore"));
 		register(estrianOre = new BlockOreMod("estrian_ore"));
+		register(clinzicBlock = new BlockCompressed("clinzic_Block"));
+		register(balriumBlock = new BlockCompressed("balrium_Block"));
+		register(estrianBlock = new BlockCompressed("estrian_Block"));
 	}
 
 	private static void register(Block b) {
@@ -29,6 +33,9 @@ public class Blocks {
 		registerRender(clinzicOre);
 		registerRender(balriumOre);
 		registerRender(estrianOre);
+		registerRender(clinzicBlock);
+		registerRender(balriumBlock);
+		registerRender(estrianBlock);
 	}
 
 	@SideOnly(Side.CLIENT)

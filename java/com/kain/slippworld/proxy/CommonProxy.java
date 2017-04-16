@@ -1,5 +1,6 @@
 package com.kain.slippworld.proxy;
 
+import com.kain.slippworld.*;
 import com.kain.slippworld.block.*;
 import com.kain.slippworld.item.*;
 
@@ -13,6 +14,8 @@ public abstract class CommonProxy {
 	}
 	
 	public void init() {
+		addCraftingRecipes();
+		addFurnaceRecipes();
 	}
 	
 	public void postInit() {
@@ -22,9 +25,16 @@ public abstract class CommonProxy {
 	public abstract void initClient();
 	public abstract void postInitClient();
 	
+	private static void addCraftingRecipes() {
+		for(Mineral m : Mineral.values()) {
+			GameRegistry.addShapedRecipe(new ItemStack(m.block, 1), new Object[] {"III", "III", "III", 'I', m.ingot});
+			GameRegistry.addShapelessRecipe(new ItemStack(m.ingot, 9), new Object[] {m.block});
+		}
+	}
+	
 	private static void addFurnaceRecipes() {
-		GameRegistry.addSmelting(Blocks.clinzicOre, new ItemStack(Items.clinzicIngot), 7);
-		GameRegistry.addSmelting(Blocks.balriumOre, new ItemStack(Items.balriumIngot), 7);
-		GameRegistry.addSmelting(Blocks.estrianOre, new ItemStack(Items.estrianIngot), 7);
+		for(Mineral m : Mineral.values()) {
+			GameRegistry.addSmelting(m.ore, new ItemStack(m.ingot, 1), 7);
+		}
 	}
 }
