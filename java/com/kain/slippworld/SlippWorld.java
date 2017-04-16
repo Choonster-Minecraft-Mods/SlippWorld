@@ -16,7 +16,17 @@ public class SlippWorld {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		proxy.preInit();
+		proxy.preInitClient();
+	}
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
 		proxy.init();
 		proxy.initClient();
+	}
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event) {
+		proxy.postInit();
+		proxy.postInitClient();
 	}
 }
