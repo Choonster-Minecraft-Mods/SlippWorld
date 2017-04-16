@@ -10,10 +10,12 @@ import net.minecraftforge.fml.common.registry.*;
 import net.minecraftforge.fml.relauncher.*;
 
 public class Items {
-	public static Item clinzicIngot;
+	public static Item clinzicIngot, balriumIngot, estrianIngot;
 
 	public static void init() {
 		register(clinzicIngot = new ItemMod("clinzic_ingot").setCreativeTab(CreativeTabs.MATERIALS));
+		register(balriumIngot = new ItemMod("balrium_ingot").setCreativeTab(CreativeTabs.MATERIALS));
+		register(estrianIngot = new ItemMod("estrian_ingot").setCreativeTab(CreativeTabs.MATERIALS));
 	}
 
 	private static void register(Item i) {

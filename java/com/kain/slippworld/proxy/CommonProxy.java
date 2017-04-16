@@ -24,5 +24,7 @@ public abstract class CommonProxy {
 	
 	private static void addFurnaceRecipes() {
 		GameRegistry.addSmelting(Blocks.clinzicOre, new ItemStack(Items.clinzicIngot), 7);
+		GameRegistry.addSmelting(Blocks.balriumOre, new ItemStack(Items.balriumIngot), 7);
+		GameRegistry.addSmelting(Blocks.estrianOre, new ItemStack(Items.estrianIngot), 7);
 	}
 }

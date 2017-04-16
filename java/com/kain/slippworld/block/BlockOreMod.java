@@ -13,12 +13,8 @@ import net.minecraft.util.math.*;
 import net.minecraft.world.*;
 
 public class BlockOreMod extends BlockMod {
-	public Item ingot;
-
-	public BlockOreMod(String name, Item ingot) {
+	public BlockOreMod(String name) {
 		super(Material.ROCK, name);
-
-		this.ingot = ingot;
 		
 		this.setHarvestLevel("pickaxe", 3);
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);

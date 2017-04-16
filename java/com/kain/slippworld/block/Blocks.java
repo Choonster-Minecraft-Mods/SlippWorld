@@ -11,10 +11,12 @@ import net.minecraftforge.fml.common.registry.*;
 import net.minecraftforge.fml.relauncher.*;
 
 public class Blocks {
-	public static Block clinzicOre;
+	public static Block clinzicOre, balriumOre, estrianOre;
 
 	public static void init() {
-		register(clinzicOre = new BlockOreMod("clinzic_ore", Items.clinzicIngot));
+		register(clinzicOre = new BlockOreMod("clinzic_ore"));
+		register(balriumOre = new BlockOreMod("balrium_ore"));
+		register(estrianOre = new BlockOreMod("estrian_ore"));
 	}
 
 	private static void register(Block b) {
