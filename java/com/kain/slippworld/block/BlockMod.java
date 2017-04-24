@@ -12,7 +12,7 @@ public class BlockMod extends Block {
 	public BlockMod(Material m, String name) {
 		super(m);
 
-		this.setRegistryName(SlippWorld.MOD_ID, name);
+		this.setRegistryName(Reference.MOD_ID, name);
 		this.setUnlocalizedName(name);
 	}
 
