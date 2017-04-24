@@ -54,7 +54,7 @@ public class WorldSavedDataMod extends WorldSavedData {
 		NBTTagCompound nbt = chunkData.get(pos);
 		
 		if(nbt == null) {
-			System.out.println("Chunk data not created, creating");
+			//System.out.println("Chunk data not created, creating");
 			
 			nbt = new NBTTagCompound();
 			chunkData.put(pos, nbt);

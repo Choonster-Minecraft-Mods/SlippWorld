@@ -18,9 +18,10 @@ public class Blocks {
 		register(clinzicOre = new BlockOreMod("clinzic_ore"));
 		register(balriumOre = new BlockOreMod("balrium_ore"));
 		register(estrianOre = new BlockOreMod("estrian_ore"));
-		register(clinzicBlock = new BlockCompressed("clinzic_Block"));
-		register(balriumBlock = new BlockCompressed("balrium_Block"));
-		register(estrianBlock = new BlockCompressed("estrian_Block"));
+		
+		register(clinzicBlock = new BlockCompressed("clinzic_block"));
+		register(balriumBlock = new BlockCompressed("balrium_block"));
+		register(estrianBlock = new BlockCompressed("estrian_block"));
 	}
 
 	private static void register(Block b) {
@@ -33,6 +34,7 @@ public class Blocks {
 		registerRender(clinzicOre);
 		registerRender(balriumOre);
 		registerRender(estrianOre);
+		
 		registerRender(clinzicBlock);
 		registerRender(balriumBlock);
 		registerRender(estrianBlock);
