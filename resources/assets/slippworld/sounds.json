@@ -1,0 +1,7 @@
+{
+	"repeater": {
+		"category": "player",
+		"subtitle": "slippworld.repeater.shoot",
+		"sounds": [ "slippworld:repeater" ]
+	}
+}

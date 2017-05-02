@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.kain.slippworld.*;
 import com.kain.slippworld.block.*;
+import com.kain.slippworld.data.*;
 
 import net.minecraft.block.*;
 import net.minecraft.block.state.pattern.*;
@@ -29,7 +30,7 @@ public class WorldRejuvenationEvent {
 		World w = e.getWorld();
 
 		if(!w.isRemote) {
-			WorldSavedDataMod data = WorldSavedDataMod.get(w);
+			RejuventationData data = RejuventationData.get(w);
 			NBTTagCompound nbt = data.getChunkData(e.getChunk().getPos());
 
 			if(data.isDragonSlain) {
@@ -59,7 +60,7 @@ public class WorldRejuvenationEvent {
 
 		if(!e.world.isRemote) {
 			if(e instanceof EntityDragon) {
-				WorldSavedDataMod data = WorldSavedDataMod.get(e.world);
+				RejuventationData data = RejuventationData.get(e.world);
 
 				data.isDragonSlain = true;
 				data.markDirty();

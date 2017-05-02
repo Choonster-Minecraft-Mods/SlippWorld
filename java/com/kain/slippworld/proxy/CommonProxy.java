@@ -2,17 +2,25 @@ package com.kain.slippworld.proxy;
 
 import com.kain.slippworld.*;
 import com.kain.slippworld.block.*;
+import com.kain.slippworld.data.repeater.*;
 import com.kain.slippworld.event.*;
 import com.kain.slippworld.item.*;
+import com.kain.slippworld.network.*;
 
 import net.minecraft.item.*;
 import net.minecraftforge.common.*;
+import net.minecraftforge.fml.common.network.*;
 import net.minecraftforge.fml.common.registry.*;
+import net.minecraftforge.fml.relauncher.*;
 
 public abstract class CommonProxy {
 	public void preInit() {
+		SlippWorld.channel = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.MOD_ID + "_channel");
+		SlippWorld.channel.registerMessage(MessageTargetEntityHandler.class, MessageTargetEntity.class, 0, Side.SERVER);
+
 		Items.init();
 		Blocks.init();
+		Sounds.init();
 	}
 
 	public void init() {
@@ -20,6 +28,8 @@ public abstract class CommonProxy {
 		addFurnaceRecipes();
 
 		MinecraftForge.EVENT_BUS.register(new WorldRejuvenationEvent());
+
+		RepeaterCapability.register();
 	}
 
 	public void postInit() {

@@ -38,6 +38,8 @@ item.clinzic_boots.name=Clinzic Boots
 item.balrium_boots.name=Balrium Boots
 item.estrian_boots.name=Estrian Boots
 
+item.clinzic_repeater.name=Clinzic Repeater
+
 tile.clinzic_ore.name=Clinzic Ore
 tile.balrium_ore.name=Balrium Ore
 tile.estrian_ore.name=Estrian Ore

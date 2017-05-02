@@ -22,6 +22,8 @@ public class Items {
 	public static Item[] clinzicTools, balriumTools, estrianTools;
 	public static Item[] clinzicArmor, balriumArmor, estrianArmor;
 
+	public static Item clinzicRepeater;
+
 	public static void init() {
 		register(clinzicIngot = new ItemMod("clinzic_ingot").setCreativeTab(CreativeTabs.MATERIALS));
 		register(balriumIngot = new ItemMod("balrium_ingot").setCreativeTab(CreativeTabs.MATERIALS));
@@ -34,6 +36,8 @@ public class Items {
 		register(clinzicArmor = createArmor(Mineral.CLINZIC.armorMaterial));
 		register(balriumArmor = createArmor(Mineral.BALRIUM.armorMaterial));
 		register(estrianArmor = createArmor(Mineral.ESTRIAN.armorMaterial));
+
+		register(clinzicRepeater = new ItemRepeater(Mineral.CLINZIC.toolMaterial, 12F, 20));
 	}
 
 	private static void register(Item i) {
@@ -49,7 +53,6 @@ public class Items {
 	private static Item[] createTools(ToolMaterial material) {
 		Item[] toolArray = new Item[5];
 
-		
 		toolArray[0] = new ItemSwordMod(material);
 		toolArray[1] = new ItemPickaxeMod(material);
 		toolArray[2] = new ItemShovelMod(material);
@@ -83,6 +86,8 @@ public class Items {
 		registerRender(clinzicArmor);
 		registerRender(balriumArmor);
 		registerRender(estrianArmor);
+
+		registerRender(clinzicRepeater);
 	}
 
 	@SideOnly(Side.CLIENT)

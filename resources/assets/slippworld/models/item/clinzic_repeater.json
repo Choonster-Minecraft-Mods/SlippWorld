@@ -1,0 +1,18 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "slippworld:items/clinzic_repeater"
+	},
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 352, 272, 40 ],
+            "translation": [ -3.75, 0.75, -3.875 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 302, 272, 328 ],
+            "translation": [ 2.25, 3.5, -2.75 ],
+            "scale": [ 1, 1, 1 ]
+        }
+    }
+}

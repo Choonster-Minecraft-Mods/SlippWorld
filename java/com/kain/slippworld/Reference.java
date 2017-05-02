@@ -9,7 +9,7 @@ public class Reference {
 	public static final String WORLD_DATA_CHUNKS = "Chunk Data";
 	public static final String CHUNK_REJUVENATED_TAG = "Rejuvenated";
 
-	public static int clinzicPerChunk = 8, balriumPerChunk = 8, estrianPerChunk = 8;
+	public static int clinzicPerChunk = 6, balriumPerChunk = 6, estrianPerChunk = 6;
 	public static int clinzicVeinSize = 8, balriumVeinSize = 8, estrianVeinSize = 8;
 	public static int clinzicMinY = 16, clinzicMaxY = 64, balriumMinY = 16, balriumMaxY = 64, estrianMinY = 16, estrianMaxY = 64;
 }
