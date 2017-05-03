@@ -97,15 +97,19 @@ public class ItemRepeater extends Item {
 		if(!player.world.isRemote) {
 			IRepeaterData data = RepeaterCapability.getCapability(itemStack);
 
-			if(data != null && data.getCoolDown() == 0) {
-				entity.hurtResistantTime = 0;
-				entity.attackEntityFrom(DamageSource.GENERIC, getDamage());
+			if (data != null) {
+				if (data.getCoolDown() == 0) {
+					entity.hurtResistantTime = 0;
+					entity.attackEntityFrom(DamageSource.GENERIC, getDamage());
 
-				data.setCoolDown(100);
+					data.setCoolDown(100);
 
-				player.world.playSound(null, player.posX, player.posY, player.posZ, Sounds.repeater, SoundCategory.PLAYERS, 5F, -1F);
+					player.world.playSound(null, player.posX, player.posY, player.posZ, Sounds.repeater, SoundCategory.PLAYERS, 5F, -1F);
 
-				System.out.println("BANG");
+					System.out.println("BANG");
+				} else {
+					System.out.println("ON COOLDOWN");
+				}
 			}
 		}
 	}

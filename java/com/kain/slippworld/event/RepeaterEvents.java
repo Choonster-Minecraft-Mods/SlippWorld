@@ -41,7 +41,7 @@ public class RepeaterEvents {
 				if(ray.entityHit != null && ray.typeOfHit == Type.ENTITY && ray.entityHit instanceof EntityLivingBase) {
 					EntityLivingBase entity = (EntityLivingBase) ray.entityHit;
 
-					SlippWorld.channel.sendToServer(new MessageTargetEntity(entity, player.getActiveItemStack()));
+					SlippWorld.channel.sendToServer(new MessageTargetEntity(entity));
 				}
 			}
 		}
