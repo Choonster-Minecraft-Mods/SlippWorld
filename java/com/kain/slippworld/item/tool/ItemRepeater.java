@@ -46,7 +46,7 @@ public class ItemRepeater extends Item {
 		if(e instanceof EntityPlayer) {
 			EntityPlayer player = ((EntityPlayer) e);
 
-			if(!itemStack.isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND).equals(itemStack)) {
+			if (!itemStack.isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND) == itemStack) {
 				player.resetActiveHand();
 				player.setActiveHand(EnumHand.MAIN_HAND);
 			}

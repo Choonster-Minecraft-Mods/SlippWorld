@@ -35,7 +35,7 @@ public class RepeaterEvents {
 			EntityPlayer player = Minecraft.getMinecraft().player;
 			ItemStack itemStack = player.getActiveItemStack();
 
-			if(!itemStack.isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND).equals(itemStack) && itemStack.getItem() instanceof ItemRepeater) {
+			if (!itemStack.isEmpty() && player.getHeldItem(EnumHand.MAIN_HAND) == itemStack && itemStack.getItem() instanceof ItemRepeater) {
 				RayTraceResult ray = ClientUtil.getMouseOverExtended(((ItemRepeater) itemStack.getItem()).getDistance());
 
 				if(ray.entityHit != null && ray.typeOfHit == Type.ENTITY && ray.entityHit instanceof EntityLivingBase) {
