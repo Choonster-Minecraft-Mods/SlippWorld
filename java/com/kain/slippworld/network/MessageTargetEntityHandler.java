@@ -21,11 +21,6 @@ public class MessageTargetEntityHandler implements IMessageHandler<MessageTarget
 					((ItemRepeater) activeItem.getItem()).attackEntity(activeItem, (EntityLivingBase) e, player);
 				}
 			}
-		try {
-			this.finalize();
-		} catch(Throwable e) {
-			e.printStackTrace();
-		}
 		});
 
 		return null;
