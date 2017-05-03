@@ -60,7 +60,7 @@ public class ItemRepeater extends Item {
 
 				if(coolDown > 0) {
 					System.out.println("COOL DOWN");
-					data.setCoolDown(coolDown--);
+					data.setCoolDown(--coolDown);
 				}
 			}
 		}
